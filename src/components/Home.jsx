@@ -5,6 +5,7 @@ import gym from "../assets/gym2.png";
 import { BsStopwatchFill } from "react-icons/bs";
 import { MdLocalFireDepartment } from "react-icons/md";
 import { MdOutlineDirectionsRun } from "react-icons/md";
+import { LuDumbbell } from "react-icons/lu";
 
 
 
@@ -99,9 +100,9 @@ const Home = () => {
                         <p className='text-white font-bold text-2xl'>20</p>
                 </div>
                 <div className='w-30 h-35 border border-gray-400 rotate-12 shadow-xl mr-50 rounded-2xl bg-white/30 flex flex-col justify-center items-center'>
-                        <MdLocalFireDepartment className=' text-3xl text-[#C7FF39]'/>
-                        <p className='text-2xl font-light text-white'>Kcal</p>
-                        <p className='text-white font-bold text-2xl'>550</p>
+                        <LuDumbbell className=' text-3xl text-[#C7FF39]'/>
+                        <p className='text-2xl font-light text-white'>Set</p>
+                        <p className='text-white font-bold text-2xl'>5</p>
                 </div>
             </div>
         </div>
