@@ -130,12 +130,12 @@ const Home = () => {
                 <p className='text-3xl font-bold text-white'>100+ <span className='text-[10px] font-extralight'>Happy Spirits</span></p>
             </div>
             <div className='w-60 h-110 flex flex-col justify-around items-center'>
-                <div className='w-30 h-35 border border-gray-400 -rotate-12 shadow-xl ml-50 rounded-2xl bg-white/30 flex flex-col justify-center items-center'>
+                <div className='w-30 h-35 border border-gray-400 -rotate-12 shadow-xl ml-50 rounded-3xl bg-white/30 flex flex-col justify-center items-center'>
                         <BsStopwatchFill className=' text-3xl text-[#C7FF39]'/>
                         <p className='text-2xl font-light text-white'>Hours</p>
                         <p className='text-white font-bold text-2xl'>1.5</p>
                 </div>
-                <div className='w-30 h-35 border border-gray-400 -rotate-12 shadow-xl ml-50 rounded-2xl bg-white/30 flex flex-col justify-center items-center'>
+                <div className='w-30 h-35 border border-gray-400 -rotate-12 shadow-xl ml-50 rounded-3xl bg-white/30 flex flex-col justify-center items-center'>
                         <MdLocalFireDepartment className=' text-3xl text-[#C7FF39]'/>
                         <p className='text-2xl font-light text-white'>Kcal</p>
                         <p className='text-white font-bold text-2xl'>550</p>
@@ -147,12 +147,12 @@ const Home = () => {
                 className='mb-42 w-120'
             />
             <div className='w-60 h-110 flex flex-col justify-around items-center'>
-                <div className='w-30 h-35 border border-gray-400 rotate-12 shadow-xl mr-50 rounded-2xl bg-white/30 flex flex-col justify-center items-center'>
+                <div className='w-30 h-35 border border-gray-400 rotate-12 shadow-xl mr-50 rounded-3xl bg-white/30 flex flex-col justify-center items-center'>
                         <MdOutlineDirectionsRun className=' text-3xl text-[#C7FF39]'/>
                         <p className='text-2xl font-light text-white'>Poses</p>
                         <p className='text-white font-bold text-2xl'>20</p>
                 </div>
-                <div className='w-30 h-35 border border-gray-400 rotate-12 shadow-xl mr-50 rounded-2xl bg-white/30 flex flex-col justify-center items-center'>
+                <div className='w-30 h-35 border border-gray-400 rotate-12 shadow-xl mr-50 rounded-3xl bg-white/30 flex flex-col justify-center items-center'>
                         <LuDumbbell className=' text-3xl text-[#C7FF39]'/>
                         <p className='text-2xl font-light text-white'>Set</p>
                         <p className='text-white font-bold text-2xl'>5</p>
