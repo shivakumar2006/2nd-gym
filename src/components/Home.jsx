@@ -1,4 +1,4 @@
-import React, { useRef} from 'react';
+import React, { useState, useRef } from 'react';
 import { CgGym } from 'react-icons/cg';
 import { GiGymBag } from "react-icons/gi";
 import gym from "../assets/gym2.png";
@@ -6,7 +6,8 @@ import { BsStopwatchFill } from "react-icons/bs";
 import { MdLocalFireDepartment } from "react-icons/md";
 import { MdOutlineDirectionsRun } from "react-icons/md";
 import { LuDumbbell } from "react-icons/lu";
-
+import { PiGreaterThan } from "react-icons/pi";
+import { FiMenu, FiX } from 'react-icons/fi';
 
 
 const Home = () => {
@@ -18,6 +19,8 @@ const Home = () => {
     const blogsRef = useRef(null);
     const contactRef = useRef(null);
     const getInTouch = useRef(null);
+
+    const [navOpen, setNavOpen] = useState(false);
 
   return (
     <div className='w-full min-h-screen'
@@ -65,17 +68,67 @@ const Home = () => {
                         >
                             Get in Touch
                         </button>
-                </div>
-                </div>
+
+                        {/* Mobile Menu Toggle */}
+                    <div className='lg:hidden'>
+                        <button onClick={() => setNavOpen(!navOpen)}>
+                            {navOpen ? (
+                                <FiX className='text-white text-3xl' />
+                            ) : (
+                                <FiMenu className='text-white text-3xl' />
+                            )}
+                        </button>
+                    </div>
+
+                    {/* Mobile Nav */}
+                    {navOpen && (
+                        <div className='absolute top-20 left-0 w-full bg-black/90 rounded-b-2xl px-6 py-4 flex flex-col gap-4 lg:hidden z-50'>
+                            {[
+                                { name: "Home", ref: homeRef },
+                                { name: "About", ref: aboutRef },
+                                { name: "Programs", ref: programsRef },
+                                { name: "Pricing", ref: pricingRef },
+                                { name: "Testimonials", ref: blogsRef },
+                            ].map((item, index) => (
+                                <p
+                                    key={index}
+                                    className='text-white font-light text-base cursor-pointer hover:text-[#C7FF39]'
+                                    onClick={() => scrollToSection(item.ref)}
+                                >
+                                    {item.name}
+                                </p>
+                            ))}
+                            <button
+                                className='w-full py-2 mt-2 border border-white text-white font-light rounded-xl'
+                                onClick={() => scrollToSection(contactRef)}
+                            >
+                                Contact US
+                            </button>
+                            <button
+                                className='w-full py-2 bg-[#C7FF39] text-black font-medium rounded-xl'
+                                onClick={() => scrollToSection(getInTouch)}
+                            >
+                                Get in Touch
+                            </button>
+                        </div>
+                    )}
+                
+                    </div>
+                
+            </div>
+                
         </div>
 
         {/* home */}
         <div className='w-full mt-15 text-center text-white font-bold text-8xl flex items-center justify-center'>
-            <p>Sculpt <span className='text-[#C7FF39]'>Your</span> Body <br /> Elevate Your <span className='text-[#C7FF39]'>Spirit</span></p>
+            <p>Sculpt <span className='text-[#C7FF39]/50'>Your</span> Body <br /> Elevate Your <span className='text-[#C7FF39]/50'>Spirit</span></p>
         </div>
 
         {/* hero image section */}
         <div className='w-full h-110 mt-2 flex justify-center items-center'>
+            <div className='w-50 ml-[-200px] mt-50 h-15 flex justify-center items-center'>
+                <p className='text-3xl font-bold text-white'>100+ <span className='text-[10px] font-extralight'>Happy Spirits</span></p>
+            </div>
             <div className='w-60 h-110 flex flex-col justify-around items-center'>
                 <div className='w-30 h-35 border border-gray-400 -rotate-12 shadow-xl ml-50 rounded-2xl bg-white/30 flex flex-col justify-center items-center'>
                         <BsStopwatchFill className=' text-3xl text-[#C7FF39]'/>
@@ -104,6 +157,11 @@ const Home = () => {
                         <p className='text-2xl font-light text-white'>Set</p>
                         <p className='text-white font-bold text-2xl'>5</p>
                 </div>
+            </div>
+            <div className='w-50 mr-[-200px] mt-50 h-15 flex justify-center items-center'>
+                <button className='w-40 h-13 rounded-2xl bg-[#C7FF39] flex justify-center items-center cursor-pointer'>
+                        Let's Started <PiGreaterThan /> <PiGreaterThan />
+                </button>   
             </div>
         </div>
     </div>
