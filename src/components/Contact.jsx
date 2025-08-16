@@ -1,9 +1,7 @@
-import React, { useRef } from 'react';
+import React from 'react';
 import LeafMap from "./Map";
 
-const Contact = () => {
-
-    const contactRef = useRef(null);
+const Contact = ({ contactRef }) => {
 
   return (
     <div className='w-full bg-black/90'>

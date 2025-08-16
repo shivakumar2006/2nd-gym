@@ -1,4 +1,4 @@
-import React, { useRef } from 'react';
+import React from 'react';
 import { GiGymBag } from "react-icons/gi";
 import { SiInstagram } from "react-icons/si";
 import { FaFacebookF } from "react-icons/fa6";
@@ -8,9 +8,7 @@ import { FiPhoneCall } from "react-icons/fi";
 import { IoMailOutline } from "react-icons/io5";
 import { IoLocationOutline } from "react-icons/io5";
 
-const Footer = () => {
-
-    const getInTouch = useRef(null);
+const Footer = ({ getInTouch }) => {
 
   return (
     <div className='w-full bg-black/90'>

@@ -10,17 +10,31 @@ import { PiGreaterThan } from "react-icons/pi";
 import { FiMenu, FiX } from 'react-icons/fi';
 
 
-const Home = () => {
+const Home = ({ 
+    homeRef,
+    aboutRef,
+    programsRef,
+    pricingRef,
+    blogsRef,
+    contactRef,
+    getInTouch,
+}) => {
 
-     const homeRef = useRef(null);
-    const aboutRef = useRef(null);
-    const programsRef = useRef(null);
-    const pricingRef = useRef(null); 
-    const blogsRef = useRef(null);
-    const contactRef = useRef(null);
-    const getInTouch = useRef(null);
+    // const homeRef = useRef(null);
+    // const aboutRef = useRef(null);
+    // const programsRef = useRef(null);
+    // const pricingRef = useRef(null); 
+    // const blogsRef = useRef(null);
+    // const contactRef = useRef(null);
+    // const getInTouch = useRef(null);
 
     const [navOpen, setNavOpen] = useState(false);
+
+    const scrollToSection = (ref) => {
+      if (ref && ref.current) {
+        ref.current.scrollIntoView({ behavior: "smooth" });
+      }
+    };
 
   return (
     <div className='w-full min-h-screen'
@@ -159,11 +173,15 @@ const Home = () => {
                 </div>
             </div>
             <div className='w-50 mr-[-200px] mt-50 h-15 flex justify-center items-center'>
-                <button className='w-40 h-13 rounded-2xl bg-[#C7FF39] flex justify-center items-center cursor-pointer'>
+                <button className='w-40 h-13 rounded-2xl bg-[#C7FF39] flex justify-center items-center cursor-pointer'
+                    onClick={() => scrollToSection(pricingRef)}
+                >
                         Let's Started <PiGreaterThan /> <PiGreaterThan />
                 </button>   
             </div>
         </div>
+
+
     </div>
   )
 }

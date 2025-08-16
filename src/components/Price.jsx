@@ -1,8 +1,7 @@
-import React, { useRef } from 'react'
+import React from 'react'
 
-const Price = () => {
+const Price = ({ pricingRef }) => {
 
-    const pricingRef = useRef(null);
 
      const price = [
         { 

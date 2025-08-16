@@ -1,9 +1,7 @@
-import React, { useRef } from 'react';
+import React from 'react';
 import { FaUserCircle } from "react-icons/fa";
 
-const Testimonials = () => {
-
-    const blogsRef = useRef(null);
+const Testimonials = ({ blogsRef }) => {
 
     const blogs = [
         { 

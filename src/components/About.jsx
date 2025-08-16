@@ -1,12 +1,10 @@
-import React, { useRef } from 'react';
+import React from 'react';
 import { FaDumbbell } from "react-icons/fa6";
 import { LuClipboardList } from "react-icons/lu";
 import { MdOutlineDirectionsRun } from "react-icons/md";
 import { FaCrown } from "react-icons/fa";
 
-const About = () => {
-
-    const aboutRef = useRef();
+const About = ({ aboutRef }) => {
 
     const information = [
         {

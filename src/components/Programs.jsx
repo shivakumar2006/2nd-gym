@@ -1,4 +1,4 @@
-import React, { useRef } from 'react';
+import React from 'react';
 import weight from "../assets/weight.jpg";
 import cardio from "../assets/cardio.jpg";
 import bodybuilding from "../assets/body.jpg";
@@ -8,9 +8,7 @@ import { LazyLoadImage } from 'react-lazy-load-image-component';
 import 'react-lazy-load-image-component/src/effects/blur.css';
 
 
-const Programs = () => {
-
-    const programsRef = useRef();
+const Programs = ({ programsRef }) => {
 
     const programs = [
       { title: "BODYBUILDING", image: bodybuilding },
