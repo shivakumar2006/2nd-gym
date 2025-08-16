@@ -28,6 +28,7 @@ dist-ssr
 *.jpeg
 *.png
 *.gif
+*.mp4
 
 # Ignore all images inside a specific folder
 /src/assets/*
