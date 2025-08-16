@@ -33,7 +33,7 @@ const Video = () => {
   return (
     <div className='w-full min-h-screen bg-black/90'>
         {/* Heading */}
-        <div className='w-full pt-10 pl-20 flex flex-row gap-5'>
+        <div className='w-full pt-20 pl-20 flex flex-row gap-5'>
             <div className='w-30 h-15 rounded-4xl bg-[#C7FF39] flex flex-row justify-center items-center text-5xl gap-0'>
                 <IoMdArrowDropright />
                 <IoMdArrowDropright />
@@ -50,7 +50,7 @@ const Video = () => {
         </p>
 
         {/* Video Card */}
-        <div className='w-full flex justify-center mt-20 pr-50 pb-10 items-center'>
+        <div className='w-full flex flex-row justify-center mt-20 pr-50 pb-10 items-center'>
             <div 
                 className='w-175 ml-[-370px] rounded-3xl h-99 shadow-xl relative group'
                 onMouseEnter={handleMouseEnter}
@@ -66,7 +66,7 @@ const Video = () => {
                 {/* play button overlay */}
                 {!fullscreen && (
                     <button 
-                        className='absolute inset-0 flex justify-center items-center bg-black/40 hover:bg-black/60 transition rounded-3xl'
+                        className='absolute inset-0 flex justify-center items-center bg-black/40 hover:bg-black/60 transition rounded-3xl cursor-pointer'
                         onClick={handlePlayClick}
                     >
                         <FaPlay className='text-[#C7FF39] text-6xl'/>
