@@ -8,6 +8,7 @@ import Video from "./components/Video";
 import Price from "./components/Price";
 import Trainer from "./components/Trainer";
 import Testimonials from "./components/Testimonials";
+import Personalized from "./components/Personalized";
 
 const App = () => {
     return (
@@ -20,6 +21,7 @@ const App = () => {
             <Price />
             <Trainer />
             <Testimonials />
+            <Personalized />
         </>
     )
 }
