@@ -9,6 +9,8 @@ import Price from "./components/Price";
 import Trainer from "./components/Trainer";
 import Testimonials from "./components/Testimonials";
 import Personalized from "./components/Personalized";
+import Contact from "./components/Contact";
+import Footer from "./components/Footer";
 
 const App = () => {
     return (
@@ -22,6 +24,8 @@ const App = () => {
             <Trainer />
             <Testimonials />
             <Personalized />
+            <Contact />
+            <Footer />
         </>
     )
 }
