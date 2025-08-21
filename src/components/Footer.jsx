@@ -11,7 +11,7 @@ import { IoLocationOutline } from "react-icons/io5";
 const Footer = ({ getInTouch }) => {
 
   return (
-    <div className='w-full bg-black/90'>
+    <div className='w-full pt-2 md:pt-0 bg-black/90'>
         {/* Footer */}
         <div
           ref={getInTouch}
