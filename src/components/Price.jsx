@@ -33,7 +33,7 @@ const Price = ({ pricingRef }) => {
     <div ref={pricingRef} className="w-auto min-h-screen bg-[#363537]">
   {/* Heading */}
   <div className="w-full flex flex-col">
-    <p className="text-[130px] lg:ml-30 font-extrabold text-white tracking-tight">
+    <p className="md:text-[130px] text-8xl ml-10 mt-10 md:mt-0 lg:ml-30 font-extrabold text-white tracking-tight">
       +<span className="text-[#C7FF39]">+</span>
     </p>
     <p className="text-4xl ml-10 lg:ml-30 font-bold text-white">
