@@ -48,7 +48,7 @@ const Personalized = () => {
           </div>
 
         <div className="w-full mt-10 sm:mt-15 flex justify-center items-center px-4">
-          <div className="w-full max-w-5xl flex flex-wrap justify-center sm:justify-between items-center gap-4">
+          <div className="w-full max-w-5xl flex flex-wrap justify-center sm:justify-between items-center gap-4 mb-10 md:mb-0">
             {cards?.map((item, index) => (
               <div
                 key={index}
