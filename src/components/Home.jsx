@@ -40,146 +40,213 @@ const Home = ({
     <div className='w-full min-h-screen'
         style={{background: "radial-gradient(circle,rgba(71, 69, 69, 1) 0%, rgba(0, 0, 0, 1) 57%, rgba(0, 0, 0, 1) 100%)"}}
     >
-        {/* navbar  */}
-        <div className='w-full pt-8 flex justify-center items-center px-4 sm:px-0'>
-                <div className='w-full max-w-7xl h-22 rounded-2xl flex justify-between items-center px-6 sm:px-10 relative'>
-                    {/* Logo */}
-                    <div className='flex text-center items-center gap-4'>
-                        <GiGymBag className='text-[#C7FF39] text-5xl' />
-                        <div className='h-20 flex flex-col justify-center items-center'>
-                        <p className='text-sm text-white font-bold'>THE</p>
-                        <p className='text-white text-2xl sm:text-3xl font-bold'>FITNESS</p>
-                        <p className='text-white text-lg'>FACTORY</p>
-                        </div>
-                    </div>
+        {/* Navbar */}
+<div className='w-full pt-8 flex justify-center items-center px-4 sm:px-0'>
+  <div className='w-full max-w-7xl h-22 rounded-2xl flex justify-between items-center px-6 sm:px-10 relative'>
+    
+    {/* Logo */}
+    <div className='flex text-center items-center gap-4'>
+      <GiGymBag className='text-[#C7FF39] text-5xl' />
+      <div className='h-20 flex flex-col justify-center items-center'>
+        <p className='text-sm text-white font-bold'>THE</p>
+        <p className='text-white text-2xl sm:text-3xl font-bold'>FITNESS</p>
+        <p className='text-white text-lg'>FACTORY</p>
+      </div>
+    </div>
 
-                    {/* Desktop Nav */}
-                    <div className=' hidden lg:flex items-center gap-8'>
-                        {[
-                            { name: "Home", ref: homeRef },
-                            { name: "About", ref: aboutRef },
-                            { name: "Programs", ref: programsRef },
-                            { name: "Pricing", ref: pricingRef },
-                            { name: "Testimonials", ref: blogsRef },
-                        ].map((item, index) => (
-                            <p
-                                key={index}
-                                className='text-white font-extralight text-sm lg:mr-[40px] cursor-pointer hover:text-[#C7FF39]'
-                                onClick={() => scrollToSection(item.ref)}
-                            >
-                                {item.name}
-                            </p>
-                        ))}
-                        <button
-                            className=' h-12 px-4 py-2 border border-white text-white text-sm font-light rounded-xl cursor-pointer'
-                            onClick={() => scrollToSection(contactRef)}
-                        >
-                            Contact US
-                        </button>
-                        <button
-                            className='h-12 px-4 py-2 bg-[#C7FF39] text-black text-sm font-medium rounded-xl cursor-pointer'
-                            onClick={() => scrollToSection(getInTouch)}
-                        >
-                            Get in Touch
-                        </button>
+    {/* Desktop Nav */}
+    <div className='hidden lg:flex items-center gap-8'>
+      {[
+        { name: "Home", ref: homeRef },
+        { name: "About", ref: aboutRef },
+        { name: "Programs", ref: programsRef },
+        { name: "Pricing", ref: pricingRef },
+        { name: "Testimonials", ref: blogsRef },
+      ].map((item, index) => (
+        <p
+          key={index}
+          className='text-white font-extralight mr-13 text-sm cursor-pointer hover:text-[#C7FF39]'
+          onClick={() => scrollToSection(item.ref)}
+        >
+          {item.name}
+        </p>
+      ))}
+      <button
+        className='h-12 px-4 py-2 border border-white text-white text-sm font-light rounded-xl cursor-pointer'
+        onClick={() => scrollToSection(contactRef)}
+      >
+        Contact US
+      </button>
+      <button
+        className='h-12 px-4 py-2 bg-[#C7FF39] text-black text-sm font-medium rounded-xl cursor-pointer'
+        onClick={() => scrollToSection(getInTouch)}
+      >
+        Get in Touch
+      </button>
+    </div>
 
-                        {/* Mobile Menu Toggle */}
-                    <div className='lg:hidden'>
-                        <button onClick={() => setNavOpen(!navOpen)}>
-                            {navOpen ? (
-                                <FiX className='text-white text-3xl' />
-                            ) : (
-                                <FiMenu className='text-white text-3xl' />
-                            )}
-                        </button>
-                    </div>
+    {/* Mobile Menu Toggle */}
+    <div className='lg:hidden'>
+      <button onClick={() => setNavOpen(!navOpen)}>
+        {navOpen ? (
+          <FiX className='text-white text-3xl' />
+        ) : (
+          <FiMenu className='text-white text-3xl' />
+        )}
+      </button>
+    </div>
 
-                    {/* Mobile Nav */}
-                    {navOpen && (
-                        <div className='absolute top-20 left-0 w-full bg-black/90 rounded-b-2xl px-6 py-4 flex flex-col gap-4 lg:hidden z-50'>
-                            {[
-                                { name: "Home", ref: homeRef },
-                                { name: "About", ref: aboutRef },
-                                { name: "Programs", ref: programsRef },
-                                { name: "Pricing", ref: pricingRef },
-                                { name: "Testimonials", ref: blogsRef },
-                            ].map((item, index) => (
-                                <p
-                                    key={index}
-                                    className='text-white font-light text-base cursor-pointer hover:text-[#C7FF39]'
-                                    onClick={() => scrollToSection(item.ref)}
-                                >
-                                    {item.name}
-                                </p>
-                            ))}
-                            <button
-                                className='w-full py-2 mt-2 border border-white text-white font-light rounded-xl'
-                                onClick={() => scrollToSection(contactRef)}
-                            >
-                                Contact US
-                            </button>
-                            <button
-                                className='w-full py-2 bg-[#C7FF39] text-black font-medium rounded-xl'
-                                onClick={() => scrollToSection(getInTouch)}
-                            >
-                                Get in Touch
-                            </button>
-                        </div>
-                    )}
-                
-                    </div>
-                
-            </div>
-                
-        </div>
+    {/* Mobile Nav */}
+    {navOpen && (
+      <div className='absolute top-20 left-0 w-full bg-black/90 rounded-b-2xl px-6 py-4 flex flex-col gap-4 lg:hidden z-50'>
+        {[
+          { name: "Home", ref: homeRef },
+          { name: "About", ref: aboutRef },
+          { name: "Programs", ref: programsRef },
+          { name: "Pricing", ref: pricingRef },
+          { name: "Testimonials", ref: blogsRef },
+        ].map((item, index) => (
+          <p
+            key={index}
+            className='text-white font-light text-base cursor-pointer hover:text-[#C7FF39]'
+            onClick={() => {
+              scrollToSection(item.ref);
+              setNavOpen(false); // close menu after click
+            }}
+          >
+            {item.name}
+          </p>
+        ))}
+        <button
+          className='w-full py-2 mt-2 border border-white text-white font-light rounded-xl'
+          onClick={() => {
+            scrollToSection(contactRef);
+            setNavOpen(false);
+          }}
+        >
+          Contact US
+        </button>
+        <button
+          className='w-full py-2 bg-[#C7FF39] text-black font-medium rounded-xl'
+          onClick={() => {
+            scrollToSection(getInTouch);
+            setNavOpen(false);
+          }}
+        >
+          Get in Touch
+        </button>
+      </div>
+    )}
+
+  </div>
+</div>
+
 
         {/* home */}
-        <div className='w-full mt-15 text-center text-white font-bold text-8xl flex items-center justify-center'>
-            <p>Sculpt <span className='text-[#C7FF39]/50'>Your</span> Body <br /> Elevate Your <span className='text-[#C7FF39]/50'>Spirit</span></p>
-        </div>
+<div className='w-full mt-15 text-center text-white font-bold text-6xl md:text-8xl flex items-center justify-center'>
+  <p>Sculpt <span className='text-[#C7FF39]/50'>Your</span> Body <br /> Elevate Your <span className='text-[#C7FF39]/50'>Spirit</span></p>
+</div>
 
-        {/* hero image section */}
-        <div className='w-full h-110 mt-2 flex justify-center items-center'>
-            <div className='w-50 ml-[-200px] mt-50 h-15 flex justify-center items-center'>
-                <p className='text-3xl font-bold text-white'>100+ <span className='text-[10px] font-extralight'>Happy Spirits</span></p>
-            </div>
-            <div className='w-60 h-110 flex flex-col justify-around items-center'>
-                <div className='w-30 h-35 border border-gray-400 -rotate-12 shadow-xl ml-50 rounded-3xl bg-white/30 flex flex-col justify-center items-center'>
-                        <BsStopwatchFill className=' text-3xl text-[#C7FF39]'/>
-                        <p className='text-2xl font-light text-white'>Hours</p>
-                        <p className='text-white font-bold text-2xl'>1.5</p>
-                </div>
-                <div className='w-30 h-35 border border-gray-400 -rotate-12 shadow-xl ml-50 rounded-3xl bg-white/30 flex flex-col justify-center items-center'>
-                        <MdLocalFireDepartment className=' text-3xl text-[#C7FF39]'/>
-                        <p className='text-2xl font-light text-white'>Kcal</p>
-                        <p className='text-white font-bold text-2xl'>550</p>
-                </div>
-            </div>
-            <img 
-                src={gym}
-                alt='hero'
-                className='mb-42 w-120'
-            />
-            <div className='w-60 h-110 flex flex-col justify-around items-center'>
-                <div className='w-30 h-35 border border-gray-400 rotate-12 shadow-xl mr-50 rounded-3xl bg-white/30 flex flex-col justify-center items-center'>
-                        <MdOutlineDirectionsRun className=' text-3xl text-[#C7FF39]'/>
-                        <p className='text-2xl font-light text-white'>Poses</p>
-                        <p className='text-white font-bold text-2xl'>20</p>
-                </div>
-                <div className='w-30 h-35 border border-gray-400 rotate-12 shadow-xl mr-50 rounded-3xl bg-white/30 flex flex-col justify-center items-center'>
-                        <LuDumbbell className=' text-3xl text-[#C7FF39]'/>
-                        <p className='text-2xl font-light text-white'>Set</p>
-                        <p className='text-white font-bold text-2xl'>5</p>
-                </div>
-            </div>
-            <div className='w-50 mr-[-200px] mt-50 h-15 flex justify-center items-center'>
-                <button className='w-40 h-13 rounded-2xl bg-[#C7FF39] flex justify-center items-center cursor-pointer'
-                    onClick={() => scrollToSection(pricingRef)}
-                >
-                        Let's Started <PiGreaterThan /> <PiGreaterThan />
-                </button>   
-            </div>
+{/* hero image section */}
+<div className='w-full mt-[-100px] flex flex-col md:flex-row justify-center items-center gap-10 relative'>
+    {/* Desktop 100+ Happy Spirits */}
+  <div className='hidden md:flex w-50 md:w-80 ml-[-200px] md:mr-[-180px] mt-50 h-15 flex justify-center items-center'>
+    <p className='text-3xl font-bold text-white'>
+      100+ <span className='text-[10px] font-extralight'>Happy Spirits</span>
+    </p>
+  </div>
+
+  {/* Desktop Left Stats */}
+  <div className='hidden md:flex w-60 h-110 flex-col justify-around items-center'>
+    <div className='w-30 h-35 border border-gray-400 -rotate-12 shadow-xl ml-50 rounded-3xl bg-white/30 flex flex-col justify-center items-center'>
+      <BsStopwatchFill className=' text-3xl text-[#C7FF39]'/>
+      <p className='text-2xl font-light text-white'>Hours</p>
+      <p className='text-white font-bold text-2xl'>1.5</p>
+    </div>
+    <div className='w-30 h-35 border border-gray-400 -rotate-12 shadow-xl ml-50 rounded-3xl bg-white/30 flex flex-col justify-center items-center'>
+      <MdLocalFireDepartment className=' text-3xl text-[#C7FF39]'/>
+      <p className='text-2xl font-light text-white'>Kcal</p>
+      <p className='text-white font-bold text-2xl'>550</p>
+    </div>
+  </div>
+
+  {/* Hero Image */}
+  <div className='relative flex flex-col items-center'>
+    <img 
+      src={gym}
+      alt='hero'
+      className='w-80 md:w-120 mb-6 md:mb-0'
+    />
+
+    {/* Mobile Stats (stacked beneath image) */}
+    <div className='flex flex-col md:hidden w-full items-center gap-6 mt-4'>
+      <div className='flex w-full justify-center gap-4'>
+        <div className='w-28 h-28 border border-gray-400 -rotate-6 shadow-xl rounded-3xl bg-white/30 flex flex-col justify-center items-center'>
+          <BsStopwatchFill className=' text-3xl text-[#C7FF39]'/>
+          <p className='text-xl font-light text-white'>Hours</p>
+          <p className='text-white font-bold text-xl'>1.5</p>
         </div>
+        <div className='w-28 h-28 border border-gray-400 -rotate-8 shadow-xl rounded-3xl bg-white/30 flex flex-col justify-center items-center'>
+          <MdLocalFireDepartment className=' text-3xl text-[#C7FF39]'/>
+          <p className='text-xl font-light text-white'>Kcal</p>
+          <p className='text-white font-bold text-xl'>550</p>
+        </div>
+      </div>
+      <div className='flex w-full justify-center gap-4'>
+        <div className='w-28 h-28 border border-gray-400 rotate-6 shadow-xl rounded-3xl bg-white/30 flex flex-col justify-center items-center'>
+          <MdOutlineDirectionsRun className=' text-3xl text-[#C7FF39]'/>
+          <p className='text-xl font-light text-white'>Poses</p>
+          <p className='text-white font-bold text-xl'>20</p>
+        </div>
+        <div className='w-28 h-28 border border-gray-400 rotate-6 shadow-xl rounded-3xl bg-white/30 flex flex-col justify-center items-center'>
+          <LuDumbbell className=' text-3xl text-[#C7FF39]'/>
+          <p className='text-xl font-light text-white'>Set</p>
+          <p className='text-white font-bold text-xl'>5</p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  {/* Desktop Right Stats */}
+  <div className='hidden md:flex w-60 h-110 flex-col justify-around items-center'>
+    <div className='w-30 h-35 border border-gray-400 rotate-12 shadow-xl mr-50 rounded-3xl bg-white/30 flex flex-col justify-center items-center'>
+      <MdOutlineDirectionsRun className=' text-3xl text-[#C7FF39]'/>
+      <p className='text-2xl font-light text-white'>Poses</p>
+      <p className='text-white font-bold text-2xl'>20</p>
+    </div>
+    <div className='w-30 h-35 border border-gray-400 rotate-12 shadow-xl mr-50 rounded-3xl bg-white/30 flex flex-col justify-center items-center'>
+      <LuDumbbell className=' text-3xl text-[#C7FF39]'/>
+      <p className='text-2xl font-light text-white'>Set</p>
+      <p className='text-white font-bold text-2xl'>5</p>
+    </div>
+  </div>
+
+  {/* Desktop Let's Start Button */}
+  <div className='hidden md:flex w-50 md:w-80 mr-[-200px] md:ml-[-180px] mt-50 h-15 flex justify-center items-center'>
+    <button className='w-40 h-13 rounded-2xl bg-[#C7FF39] flex justify-center items-center cursor-pointer'
+      onClick={() => scrollToSection(pricingRef)}
+    >
+      Let's Started <PiGreaterThan /> <PiGreaterThan />
+    </button>   
+  </div>
+
+  {/* Mobile 100+ Happy Spirits */}
+  <div className='flex md:hidden justify-center mb-4'>
+    <p className='text-2xl font-bold text-white'>
+      100+ <span className='text-[10px] font-extralight'>Happy Spirits</span>
+    </p>
+  </div>
+
+  {/* Mobile Let's Start Button */}
+  <div className='flex md:hidden justify-center mt-4 mb-10'>
+    <button className='w-40 h-13 rounded-2xl bg-[#C7FF39] flex justify-center items-center'
+      onClick={() => scrollToSection(pricingRef)}
+    >
+      Let's Started <PiGreaterThan /> <PiGreaterThan />
+    </button>   
+  </div>
+
+</div>
 
 
     </div>
