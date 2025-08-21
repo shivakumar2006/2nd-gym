@@ -23,7 +23,7 @@ const Testimonials = ({ blogsRef }) => {
     ]
 
   return (
-    <div className='w-full pt-2 bg-black/90'>
+    <div className='w-full pt-2 md:pt-2 bg-black/90'>
         {/* tstimonials */}
           {/* Hide this part on mobile */}
         <div 

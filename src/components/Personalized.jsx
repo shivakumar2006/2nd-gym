@@ -13,7 +13,7 @@ const Personalized = () => {
     ]
 
   return (
-    <div className='w-full bg-black/90'>
+    <div className='w-full pt-2 md:pt-0 bg-black/90'>
         {/* personalized workout */}
           <div className="w-full flex mt-10 sm:pt-30 sm:mt-0 justify-center items-center px-4">
             <div className="relative w-full max-w-[920px] aspect-[16/9] rounded-2xl flex justify-center items-center">
