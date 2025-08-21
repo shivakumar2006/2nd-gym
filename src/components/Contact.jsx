@@ -4,7 +4,7 @@ import LeafMap from "./Map";
 const Contact = ({ contactRef }) => {
 
   return (
-    <div className='w-full bg-black/90'>
+    <div className='w-full pt-2 md:pt-0 bg-black/90'>
         {/* contact */}
         <div
           ref={contactRef}
@@ -12,7 +12,7 @@ const Contact = ({ contactRef }) => {
         >
           {/* Left Side - Form */}
           <div className="w-full md:w-1/2 h-auto md:h-screen flex flex-col justify-evenly items-center px-4">
-            <p className="text-white text-4xl md:text-6xl font-extrabold md:mr-75">
+            <p className="text-white text-4xl md:text-6xl font-extrabold mb-5 md:mb-0 md:mr-75">
               CON<span className="text-[#C7FF39]">TACT</span>
             </p>
 
