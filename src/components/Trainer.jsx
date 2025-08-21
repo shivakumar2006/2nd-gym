@@ -99,12 +99,12 @@ const Tainer = () => {
           </div>
         </div>
       </div>
-          <div className='w-full mt-20 flex justify-center items-center gap-20'>
+          <div className='w-full mt-20 flex justify-center items-center md:gap-20 mb-20 md:mb-0 gap-5'>
             {cards?.map((item, index) => (
-              <div key={index} className='w-30 h-40 rounded-3xl border border-gray-400 hover:border-black flex flex-col items-center justify-center gap-3 hover:bg-white hover:text-black transition-transform duration-300 hover:scale-110 group'>
+              <div key={index} className='md:w-30 w-20 h-30 md:h-40 rounded-3xl border border-gray-400 hover:border-black flex flex-col items-center justify-center gap-3 hover:bg-white hover:text-black transition-transform duration-300 hover:scale-110 group'>
                   {item.logo}
-                  <p className='text-white font-bold text-2xl group-hover:text-black'>{item.value}</p>
-                  <p className='text-2xl font-bold text-gray-400'>{item.name}</p>
+                  <p className='text-white font-bold text-xl md:text-2xl group-hover:text-black'>{item.value}</p>
+                  <p className='text-xl md:text-2xl font-bold text-gray-400'>{item.name}</p>
               </div>
             ))}
           </div>

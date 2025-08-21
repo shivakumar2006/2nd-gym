@@ -23,12 +23,12 @@ const Testimonials = ({ blogsRef }) => {
     ]
 
   return (
-    <div className='w-full bg-black/90'>
+    <div className='w-full pt-2 bg-black/90'>
         {/* tstimonials */}
           {/* Hide this part on mobile */}
         <div 
           ref={blogsRef} 
-          className="hidden md:flex w-full pt-20 flex-col"
+          className="hidden md:flex w-full md:pt-20 flex-col"
         >
           <p className="text-[130px] ml-30 font-extrabold text-white tracking-tight">
             +<span className="text-[#C7FF39]">+</span>
