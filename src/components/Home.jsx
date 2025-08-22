@@ -48,9 +48,9 @@ const Home = ({
     <div className='flex text-center items-center gap-4'>
       <GiGymBag className='text-[#C7FF39] text-5xl' />
       <div className='h-20 flex flex-col justify-center items-center'>
-        <p className='text-sm text-white font-bold'>THE</p>
+        <p className='text-sm text-white font-bold'>FINE</p>
         <p className='text-white text-2xl sm:text-3xl font-bold'>FITNESS</p>
-        <p className='text-white text-lg'>FACTORY</p>
+        {/* <p className='text-white text-lg'>GYM</p> */}
       </div>
     </div>
 

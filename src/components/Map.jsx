@@ -15,7 +15,7 @@ L.Icon.Default.mergeOptions({
 
 const Map = () => {
   // Exact decimal coordinates converted from DMS
-  const position = [28.4657071,77.0592135];
+  const position = [28.4758136,77.0408362];
 
   const googleMapsUrl = `https://www.google.com/maps?q=${position[0]},${position[1]}`;
 

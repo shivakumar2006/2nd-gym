@@ -128,7 +128,7 @@ const Footer = ({ getInTouch }) => {
                 <IoMailOutline className="text-gray-300 mt-1" /> info01@gmail.com
               </p>
               <p className="text-[12px] text-gray-300 font-extralight cursor-pointer hover:text-gray-400 flex flex-row gap-2 justify-center md:justify-start">
-                <IoLocationOutline className="text-gray-300 text-xl ml-6 lg:ml-0 lg:text-5xl lg:mb-5" /> Plot no. 140, near Unitech Signature Tower, Saini Khera Village, Sector 30, Gurugram, Harayana 122003
+                <IoLocationOutline className="text-gray-300 text-xl ml-6 lg:ml-0 lg:text-5xl lg:mb-5" /> Bihari Mandi, Bihari Mandi Market, Sanjay Gram Colony, Rajiv Nagar, Sector 13, Gurugram, Haryana 122001
               </p>
             </div>
           </div>
@@ -147,7 +147,7 @@ const Footer = ({ getInTouch }) => {
           <div className="relative w-full h-60 lg:h-130 flex flex-col pb-10 justify-center items-center">
             <p className="select-none pointer-events-none text-white/10 font-extrabold leading-none
                           text-[60px] md:text-[90px] lg:mr-4 sm:text-8xl xs:text-6xl">
-              THE
+              FINE
             </p>
             <p className="select-none pointer-events-none text-white/10 font-extrabold leading-none
                           text-[60px] md:text-[250px] sm:text-8xl xs:text-6xl">
@@ -155,7 +155,7 @@ const Footer = ({ getInTouch }) => {
             </p>
             <p className="select-none pointer-events-none text-white/10 font-extrabold leading-none
                           text-[60px] md:text-[120px] sm:text-8xl xs:text-6xl">
-              FACTORY
+              GYM
             </p>
 
             <div className="absolute bottom-0 left-0 w-full h-24 bg-gradient-to-t from-white/10 to-transparent pointer-events-none" />
